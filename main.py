@@ -8,7 +8,7 @@ from typing import Any, TypedDict
 from anthropic import AsyncAnthropic
 from anthropic.types import MessageParam, ToolUnionParam
 
-MAX_TOKENS = 1000
+MAX_TOKENS = 6000
 
 
 class PythonExpressionToolResult(TypedDict):
@@ -283,4 +283,4 @@ async def main(concurrent: bool = True):
 
 if __name__ == "__main__":
     # Set to True for concurrent execution, False for sequential execution
-    asyncio.run(main(concurrent=True))
+    asyncio.run(main(concurrent=False))
